@@ -56,15 +56,15 @@ python manage.py runserver
 
 
 
-#Api entry points
+# Api entry points
 
-##Get list of questions
+## Get list of questions
 
 ### Request
 
 `GET api/questions/`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -82,13 +82,13 @@ Vary: Accept
   
 ]
 ```
-##Get a specific question
+## Get a specific question
 
 ### Request
 
 `GET api/questions/<pk>`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -103,13 +103,13 @@ Vary: Accept
     "poll": "http://127.0.0.1:8000/api/polls/1/"
 }
 ```
-##Create a new question
+## Create a new question
 
 ### Request
 
 `POST api/questions/`
 
-###Response 
+### Response 
 ```bash
 HTTP 201 Created
 Allow: GET, POST, HEAD, OPTIONS
@@ -125,26 +125,26 @@ Vary: Accept
     "poll": "http://127.0.0.1:8000/api/polls/1/"
 }
 ```
-##Delete question
+## Delete question
 
 ### Request
 
 `DELETE api/question/<pk>`
 
-###Response 
+### Response 
 ```bash
 HTTP 204 No Content
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Type: application/json
 Vary: Accept
 ```
-##Update question
+## Update question
 
 ### Request
 
 ``PUT /api/questions/<pk>/``
 
-###Response 
+### Response 
 ```bash
 HTTP 201 Created
 Allow: GET, POST, HEAD, OPTIONS
@@ -160,13 +160,13 @@ Vary: Accept
     "poll": "http://127.0.0.1:8000/api/polls/1/"
 }
 ```
-##Get list of polls
+## Get list of polls
 
 ### Request
 
 `GET api/polls/`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -185,26 +185,26 @@ Vary: Accept
     
 ]
 ```
-##Delete poll
+## Delete poll
 
 ### Request
 
 `DELETE api/polls/<pk>`
 
-###Response 
+### Response 
 ```bash
 HTTP 204 No Content
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Type: application/json
 Vary: Accept
 ```
-##Get a specific poll
+## Get a specific poll
 
 ### Request
 
 `GET api/polls/<pk>`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -220,13 +220,13 @@ Vary: Accept
         "description": "loremipsum"
     }
 ```
-##Create a new polls
+## Create a new polls
 
 ### Request
 
 `POST api/polls/`
 
-###Response 
+### Response 
 ```bash
 HTTP 201 Created
 Allow: GET, POST, HEAD, OPTIONS
@@ -243,13 +243,13 @@ Vary: Accept
     "description": "polls"
 }
 ```
-##Update polls
+## Update polls
 
 ### Request
 
 ``PUT /api/polls/<pk>``
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -266,14 +266,14 @@ Vary: Accept
 }
 ```
 You cant change start_date field
-##Get list of answer for current user
-#####if user non authinticated automatical created new user with unicle id
+## Get list of answer for current user
+##### if user non authinticated automatical created new user with unicle id
 
 ### Request
 
 `GET api/answers/`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -291,26 +291,26 @@ Vary: Accept
    
 ]
 ```
-##Delete answer
+## Delete answer
 
 ### Request
 
 `DELETE api/answers/<pk>`
 
-###Response 
+### Response 
 ```bash
 HTTP 204 No Content
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Content-Type: application/json
 Vary: Accept
 ```
-##Get a specific poll
+## Get a specific poll
 
 ### Request
 
 `GET api/answers/<pk>`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -325,13 +325,13 @@ Vary: Accept
     "question": 1
 }
 ```
-##Create a new answer
+## Create a new answer
 
 ### Request
 
 `POST api/answers/`
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -346,13 +346,13 @@ Vary: Accept
     "question": 2
 }
 ```
-##Update answer only admin
+## Update answer only admin
 
 ### Request
 
 ``PUT /api/answers/<pk>``
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
@@ -367,13 +367,13 @@ Vary: Accept
     "question": 2
 }
 ```
-##Get answers for current user
+## Get answers for current user
 
 ### Request
 
 ``PUT /api/my-answers``
 
-###Response 
+### Response 
 ```bash
 HTTP 200 OK
 Allow: GET, HEAD, OPTIONS
